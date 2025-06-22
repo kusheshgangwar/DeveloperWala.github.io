@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DeveloperWala - Courses & Internships</title>
+<link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/developer.png">
+<link rel="stylesheet" href="Wala.css">
+</head>
+<body>
+
+  <header>
+    <img src="https://img.icons8.com/color/48/000000/developer.png" alt="DeveloperWala Logo" style="vertical-align:middle; margin-right:12px; height:48px;">
+    <span id="typing-text" style="vertical-align:middle; font-size:2em; font-weight:bold; color:#fff;">DeveloperWala</span>
+    <p>Your Gateway to Learning & Real-World Experience</p>
+  </header>
+
+  <nav>
+    <style></style>
+    </style>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#internships">Internships</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About Us</a>
+    <a href="javascript:void(0);" class="menu-icon" style="float:right;padding:2px;" onclick="toggleNav()">
+        <span style="display:block;width:24px;height:3px;background:#fff;margin:4px 0;border-radius:2px;"></span>
+        <span style="display:block;width:24px;height:3px;background:#fff;margin:4px 0;border-radius:2px;"></span>
+        <span style="display:block;width:24px;height:3px;background:#fff;margin:4px 0;border-radius:2px;"></span>
+    </a>
+    <script>
+    function toggleNav() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('open');
+    }
+    </script>
+    <style>
+    .menu-icon { cursor:pointer; }
+    @media (max-width: 700px) {
+        nav a:not(.menu-icon) { display:none; }
+        nav.open a { display:block; }
+        nav.open a.menu-icon { display:inline-block; }
+    }
+    </style>
+    </nav>
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            background: #7f7c7c;
+            z-index: 1000;
+        }
+    </style>
+  </nav>
+
+  <div class="container">
+    <!-- Home Section -->
+    <section id="home" style="margin-top:40px;">
+      <h2 class="section-title">Welcome to DeveloperWala</h2>
+      <p style="font-size:1.15em; line-height:1.7; color:#34495e; background:#f0f4f8; border-radius:8px; padding:18px 22px; box-shadow:0 1px 6px rgba(44,62,80,0.07); text-align:center;">
+        Your Gateway to Learning & Real-World Experience. Explore our courses and internships to boost your tech career!
+      </p>
+    </section>
+    <!-- Courses Section -->
+    <section id="courses">
+      <h2 class="section-title">Our Courses</h2>
+      <div class="courses">
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/web-design.png" alt="Web Development Bootcamp" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Web Development</h3>
+          <p>Learn HTML, CSS, JavaScript, and build real-world projects. Perfect for beginners and intermediates.</p>
+          <strong>₹3999</strong>
+         <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" alt="Java Programming" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Java Programming</h3>
+          <p>Comprehensive Java course covering OOP, data structures, and hands-on coding challenges.</p>
+          <strong>₹9999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/android-os.png" alt="Android App Development" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Android App Development</h3>
+          <p>Build native Android apps using Java and Kotlin. Includes UI/UX design and deployment guidance.</p>
+          <strong>₹3999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/robot-2.png" alt="Machine Learning" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Machine Learning</h3>
+          <p>Introduction to ML concepts, algorithms, and real-world projects using Python and scikit-learn.</p>
+          <strong>₹5999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+        <img src="https://img.icons8.com/color/96/000000/cloud.png" alt="Cloud Computing Fundamentals" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+        <h3>Cloud Computing</h3>
+          <p>Learn about AWS, Azure, and cloud deployment models. Ideal for aspiring cloud engineers.</p>
+          <strong>₹8999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/security-checked.png" alt="Cybersecurity Basics" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Cybersecurity</h3>
+          <p>Understand security principles, ethical hacking, and how to protect digital assets.</p>
+          <strong>₹4999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python Programming" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Python Programming</h3>
+          <p>Master Python from scratch. Includes hands-on exercises and mini-projects for practical learning.</p>
+          <strong>₹2999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/data-configuration.png" alt="Data Science Essentials" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Data Science</h3>
+          <p>Get started with data analysis, visualization, and machine learning using Python and real datasets.</p>
+          <strong>₹6999</strong>
+          <a href="https://developerwala.com/python-course" target="_blank" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships Section -->
+    <div class="internships"></div>
+    <section id="internships" style="margin-top:40px;">
+      <h2 class="section-title">Internship Opportunities</h2>
+      <div class="internships">
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/source-code.png" alt="Frontend Developer" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Frontend Developer Intern</h3>
+          <p>Work on live projects using HTML, CSS, and JavaScript. Certificate & letter of recommendation provided.</p>
+          <button class="btn">Apply Now</button>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python Developer" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Python Developer Intern</h3>
+          <p>Gain experience in backend development and automation scripts. Flexible timings and remote work.</p>
+          <button class="btn">Apply Now</button>
+        </div>
+        <div class="card">
+          <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="Data Science" style="width:64px;height:64px;margin-bottom:12px;align-self:center;">
+          <h3>Data Science Intern</h3>
+          <p>Analyze data, build models, and create dashboards. Mentorship from industry experts.</p>
+          <button class="btn">Apply Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="margin-top:40px;">
+      <h2 class="section-title">Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="margin-top:40px;">
+      <h2 class="section-title">About DeveloperWala</h2>
+    <p style="font-size:1.15em; line-height:1.7; color:#34495e; background:#f0f4f8; border-radius:8px; padding:18px 22px; box-shadow:0 1px 6px rgba(44,62,80,0.07); text-align:center;">
+        DeveloperWala is dedicated to empowering learners and aspiring professionals with industry-relevant skills in technology. We offer high-quality courses and real-world internship opportunities designed by experienced mentors. Our mission is to bridge the gap between academic learning and practical experience, helping you build a successful career in tech.
+    </p>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" style="margin-top:40px;">
+      <h2 class="section-title">Connect With Us</h2>
+      <div style="display:flex;gap:30px;align-items:center;flex-wrap:wrap;justify-content:center;">
+        <a href="https://www.instagram.com/developerwala" target="_blank" title="Instagram">
+          <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram" style="height:40px;">
+        </a><br>
+        <a href="https://www.facebook.com/developerwala" target="_blank" title="Facebook">
+          <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook" style="height:40px;">
+        </a><br>
+        <a href="https://www.youtube.com/developerwala" target="_blank" title="YouTube">
+          <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube" style="height:40px;">
+        </a><br>
+        <a href="https://www.linkedin.com/company/developerwala" target="_blank" title="LinkedIn">
+          <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" style="height:40px;">
+        </a>
+        <a href="https://twitter.com/developerwala" target="_blank" title="Twitter">
+          <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter" style="height:40px;">
+        </a><br>
+        <a href="mailto:info@developerwala.com" title="Email">
+          <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email" style="height:40px;">
+        </a>
+
+</div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 DeveloperWala. All rights reserved.
+    <script src="Wala.js"></script>
+  </footer>
