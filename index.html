@@ -16,7 +16,152 @@
   </header>
 
   <nav>
-    <style></style>
+    <style>body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fa;
+      color: #222;
+    }
+    header {
+      background: #2d3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+      nav a {
+        transition: background 0.25s ease, color 0.25s ease, transform 0.18s cubic-bezier(0.4,0,0.2,1);
+        padding: 10px 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        margin: 0 4px;
+        display: inline-block;
+        background: transparent;
+    }
+    nav a:hover:not(.menu-icon) {
+        background: #fff;
+        color: #7f7c7c;
+        border-radius: 6px;
+        transform: translateY(-2px) scale(1.07);
+        box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    }
+    nav {
+      background: #1abc9c;
+      padding: 10px 0;
+      text-align: right;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .courses, .internships {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 24px;
+      flex: 1 1 300px;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #1abc9c;
+    }
+    .card p {
+      flex: 1;
+    }
+    .card strong {
+      font-size: 1.1em;
+      color: #2d3e50;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .card img {
+      border-radius: 8px;
+      background: #f0f4f8;
+      padding: 8px;
+      margin-bottom: 12px;
+      align-self: center;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.08);
+    }
+    .courses .card, .internships .card {
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .courses .card:hover, .internships .card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(44,62,80,0.13);
+    }
+    .btn {
+      background: #1abc9c;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #159c85;
+    }
+    #contact form {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      background: #2d3e50;
+      color: #fff;
+      text-align: center;
+      padding: 18px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 800px) {
+      .courses, .internships {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        text-align: center;
+      }
+    }
+</style>
     </style>
     <a href="#home">Home</a>
     <a href="#courses">Courses</a>
