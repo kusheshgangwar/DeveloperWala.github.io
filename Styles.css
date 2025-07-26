@@ -1,145 +1,279 @@
+:root {
+  --bg-color: #d1e0e1;
+  --text-color: #222;
+  --header-bg: #2d3e50;
+  --header-text: #fff;
+  --nav-bg: #1abc9c;
+  --nav-text: #fff;
+  --nav-hover-bg: #fff;
+  --nav-hover-text: #7f7c7c;
+  --section-title-color: #2d3e50;
+  --card-bg: #fff;
+  --card-shadow: rgba(0,0,0,0.07);
+  --card-title-color: #1abc9c;
+  --card-text-color: #000;
+  --btn-bg: #1abc9c;
+  --btn-hover-bg: #159c85;
+  --btn-text: #fff;
+  --form-bg: #fff;
+  --form-border: #ccc;
+  --footer-bg: #2d3e50;
+  --footer-text: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #3c3a3a;
+  --text-color: #e0e0e0;
+  --header-bg: #545353;
+  --header-text: #e0e0e0;
+  --nav-bg: #333;
+  --nav-text: #e0e0e0;
+  --nav-hover-bg: #555;
+  --nav-hover-text: #ddd;
+  --section-title-color: #e0e0e0;
+  --card-bg: #222;
+  --card-shadow: rgba(0,0,0,0.5);
+  --card-title-color: #1abc9c;
+  --card-text-color: #ccc;
+  --btn-bg: #1abc9c;
+  --btn-hover-bg: #159c85;
+  --btn-text: #fff;
+  --form-bg: #333;
+  --form-border: #555;
+  --footer-bg: #1f1f1f;
+  --footer-text: #e0e0e0;
+}
+
 body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fa;
-      color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 25px 0;
+  text-align: center;
+}
+
+nav a {
+  transition: background 0.25s ease, color 0.25s ease, transform 0.18s cubic-bezier(0.4,0,0.2,1);
+  padding: 10px 18px;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  margin: 0 4px;
+  display: inline-block;
+  background: transparent;
+}
+
+nav a:hover:not(.menu-icon) {
+  background: var(--nav-hover-bg);
+  color: var(--nav-hover-text);
+  border-radius: 6px;
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+
+nav {
+  background: var(--nav-bg);
+  padding: 25px;
+  text-align: right;
+  display:block;
+  width:auto;
+}
+
+nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--section-title-color);
+  text-align: center;
+}
+
+.courses, .internships {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  padding: 24px;
+  flex: 1 1 300px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--card-title-color);
+}
+
+.card p {
+  flex: 1;
+  color: var(--card-text-color);
+}
+
+.card strong {
+  font-size: 1.1em;
+  color: var(--section-title-color);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.card img {
+  border-radius: 8px;
+  background: #f0f4f8;
+  padding: 8px;
+  margin-bottom: 12px;
+  align-self: center;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.08);
+}
+
+.courses .card, .internships .card {
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.courses .card:hover, .internships .card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(44,62,80,0.13);
+}
+
+.btn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 12px 0;
+  width: 100px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--btn-hover-bg);
+}
+
+#contact form {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  background: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid var(--form-border);
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 40px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+@media (max-width: 800px) {
+  .courses, .internships {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    text-align: center;
+  }
+}
+.Developer{
+  color:tomato;
+}
+.Wala{
+  color:deeppink;
+}
+
+ .menu-icon { cursor:pointer; }
+    @media (max-width: 700px) {
+        nav a:not(.menu-icon) { display:none; }
+        nav.open a { display:block; }
+        nav.open a.menu-icon { display:inline-block; }
     }
-    header {
-      background: #2d3e50;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-      nav a {
-        transition: background 0.25s ease, color 0.25s ease, transform 0.18s cubic-bezier(0.4,0,0.2,1);
-        padding: 10px 18px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        border-radius: 4px;
-        margin: 0 4px;
-        display: inline-block;
-        background: transparent;
-    }
-    nav a:hover:not(.menu-icon) {
-        background: #fff;
-        color: #7f7c7c;
-        border-radius: 6px;
-        transform: translateY(-2px) scale(1.07);
-        box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-    }
-    nav {
-      background: #1abc9c;
-      padding: 10px 0;
-      text-align: right;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 500;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .section-title {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #2d3e50;
-      text-align: center;
-    }
-    .courses, .internships {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      padding: 24px;
-      flex: 1 1 300px;
-      max-width: 340px;
-      display: flex;
-      flex-direction: column;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #1abc9c;
-    }
-    .card p {
-      flex: 1;
-    }
-    .card strong {
-      font-size: 1.1em;
-      color: #2d3e50;
-      margin-top: 8px;
-      margin-bottom: 8px;
-      display: block;
-    }
-    .card img {
-      border-radius: 8px;
-      background: #f0f4f8;
-      padding: 8px;
-      margin-bottom: 12px;
-      align-self: center;
-      box-shadow: 0 1px 4px rgba(44,62,80,0.08);
-    }
-    .courses .card, .internships .card {
-      transition: transform 0.18s, box-shadow 0.18s;
-    }
-    .courses .card:hover, .internships .card:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 6px 18px rgba(44,62,80,0.13);
-    }
-    .btn {
-      background: #1abc9c;
-      color: #fff;
-      border: none;
-      padding: 12px 0;
-      border-radius: 4px;
-      font-size: 1em;
-      cursor: pointer;
-      margin-top: 16px;
-      transition: background 0.2s;
-    }
-    .btn:hover {
-      background: #159c85;
-    }
-    #contact form {
-      max-width: 350px;
-      margin: 0 auto;
-      padding: 18px 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    }
-    #contact input, #contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 1em;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    footer {
-      background: #2d3e50;
-      color: #fff;
-      text-align: center;
-      padding: 18px 0;
-      margin-top: 40px;
-    }
-    @media (max-width: 800px) {
-      .courses, .internships {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav {
-        text-align: center;
-      }
-    }
+
+nav {
+            position: sticky;
+            top: 0;
+            background: #7f7c7c;
+            z-index: 1000;
+        }
